@@ -178,15 +178,15 @@
         <div class="container">
             <h6 class="section-subtitle text-center">Generalizing</h6>
             <h5 class="section-title text-center mb-6">Out-Of-Distribution</h5>
-            <p>Reinforcement learning algorithms are known for their brittleness when evaluated out of their training distribution.</p>
+            <p>Reinforcement learning algorithms are known for their brittleness when evaluated out of their training distribution. In contrast, AdaSubS is surprisingly resistant to various types of domain shifts.</p>
             <h5 class="text-center">Inequality Theorem Proving</h5>
             <center><img src="assets/imgs/ood_int.png" alt="OOD results in the INT environment" class="w-75 mb-3"></center>
-            <p>We trained all the components to solve problems consisting of 15 steps and evaluated on twice more complex instances.</p>
+            <p>We trained all the components to solve problems consisting of 15 steps and evaluated on twice more complex instances. AdaSubS solves more than half of the hardest problems, while its non-adaptive counterpart fails.</p>
             <h5 class="text-center">Rubik's Cube</h5>
-            <p>As we know, each cube can be solved in at most 26 moves.</p>
+            <p>As we know, each cube can be solved in at most 26 moves. To test generalization in that domain, we trained the pipeline on trajectories consisting of only 10 random moves. That distribution covers about 0.000000001% of possible configurations, mostly the easiest. Despite that gap, AdaSubS successfully solves more than 99% of fully scrambled cubes.</p>
             <h5 class="text-center">Sokoban</h5>
             <center><img src="assets/imgs/ood_sokoban.png" alt="OOD results in the Sokoban environment" class="w-75 mb-3"></center>
-            <p>The hardest aspect of the Sokoban puzzle is manipulating the boxes.</p>
+            <p>The hardest aspect of the Sokoban puzzle is manipulating the boxes. Therefore, we tested AdaSubS on boards with increased number of boxes. Even in the most crowded scenarios, our hierarchical search succeeds.</p>
         </div>
     </section>
     <!-- End of OOD Section -->
