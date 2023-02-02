@@ -43,9 +43,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#adaptivity">Adaptivity</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#insights">Insights</a>
-                    </li>
                     <!--<li class="nav-item">
                         <a class="nav-link btn btn-primary btn-sm ml-lg-3" href="components.html">Components</a>
                     </li>-->
@@ -61,9 +58,9 @@
             <h6 class="subtitle">Adjusting Planning Horizon with</h6>
             <h1 class="title">Adaptive Subgoal Search</h1>
             <div class="row" style="width: 65%">
-                <div style="width: 33.333%"><h6 class="author">Michał Zawalski</h6></div>
-                <div style="width: 33.333%"><h6 class="author">Michał Tyrolski</h6></div>
-                <div style="width: 33.333%"><h6 class="author">Konrad Czechowski</h6></div>
+                <div style="width: 33.333%"><h6 class="main_author">Michał Zawalski</h6></div>
+                <div style="width: 33.333%"><h6 class="main_author">Michał Tyrolski</h6></div>
+                <div style="width: 33.333%"><h6 class="main_author">Konrad Czechowski</h6></div>
             </div>
             <div class="row" style="width: 65%">
                 <div style="width: 33.333%"><h6 class="author">Tomasz Odrzygóźdź</h6></div>
@@ -120,15 +117,34 @@
                     <p>When solving complex problems, it is often required to use searching to determine a good action plan.</p>
                     <p>We are proud to present Adaptive Subgoal Search (AdaSubS), a trainable hierarchical search algorithm that performs efficient planning. Instead of expanding the search tree with atomic actions, AdaSubS plans with subgoals that are a few steps ahead. That leads to much sparser search trees, which makes the search faster and deeper.</p>
                     <p>Complex environments usually contain easy parts, where it is easy to advance, and hard bottlenecks. Taking advantage of this property, we introduce an adaptive mechanism that controls the distance of generated subgoals to match the local complexity of the environment. We benchmark several natural schemes of adaptivity and select one that consistently outperforms others.</p>
-                    <p>To facilitate planning with long subgoals, we introduce a verification mechanism that swiftly filters out invalid candidates.</p>
+<!--                     <p>To facilitate planning with long subgoals, we introduce a verification mechanism that swiftly filters out invalid candidates.</p> -->
                 </div>
             </div>
         </div>
     </section>
     <!-- End of Intro Section -->
+    
+    <!-- Video Section -->
+    <section id="video" class="has-bg-img py-lg">
+        <div id="videoBar" class="container" style="display:none">
+            <video id="introVideo" width="100%" controls>
+                <source src="assets/imgs/intro.ogv" type="video/ogg">
+                Your browser does not support the video tag.
+            </video> 
+        </div>
+        
+        <div id="playBar" class="container text-center">
+            <button type="button" id="playIntroButton" class="btn btn-outline-primary play-control">
+              <i class="ti-control-play" ></i>
+            </button>
+            <h6 class="section-title mt-4">See Our Overview Video</h6>
+
+        </div>
+    </section>
+    <!-- End of Video Section -->
 
     <!-- Environments -->
-    <section class="has-bg-img py-md">
+    <!--<section class="has-bg-img py-md">
         <div class="container text-center">
             <h6 class="section-subtitle">We Test on</h6>
             <h6 class="section-title mb-6">Environments with Complex Reasoning</h6>
@@ -147,7 +163,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <!-- End Of Environments -->
 
     <!-- Experiments Section -->
@@ -390,17 +406,22 @@
     <!-- End of Future Work Section -->
 
     <!-- Video Section -->
-    <section class="has-bg-img py-lg">
-        <div class="container text-center">
-
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-outline-primary play-control" data-toggle="modal" data-target="#exampleModalCenter">
+    <!--<section id="video" class="has-bg-img py-lg">
+        <div id="videoBar" class="container" style="display:none">
+            <video id="introVideo" width="100%" controls>
+                <source src="assets/imgs/intro.ogv" type="video/ogg">
+                Your browser does not support the video tag.
+            </video> 
+        </div>
+        
+        <div id="playBar" class="container text-center">
+            <button type="button" id="playIntroButton" class="btn btn-outline-primary play-control">
               <i class="ti-control-play" ></i>
             </button>
             <h6 class="section-title mt-4">See Our Overview Video</h6>
 
         </div>
-    </section>
+    </section>-->
     <!-- End of Video Section -->
 
     <!-- Contact Section -->
@@ -459,8 +480,9 @@
             </div>
         </div>
     </section>
-    <!-- Contact Section -->
+    <!-- End of Contact Section -->
 
+    <!-- Footer -->
     <section class="has-bg-img py-0">
         <div class="container">
             <div class="footer">
@@ -523,6 +545,7 @@
             </div>    
         </div>
     </section>
+    <!-- End of Footer -->
 
     <!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>

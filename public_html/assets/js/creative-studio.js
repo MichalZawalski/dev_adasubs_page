@@ -29,4 +29,15 @@ $(document).ready(function(){
             });
         } 
     });
-}); 
+});
+
+$('#playIntroButton').click(function () {
+    $('#videoBar').slideDown();
+    $('#playBar').slideUp();
+    $('#introVideo').get(0).play()
+});
+
+$('#introVideo').on("ended", function () {
+    $('#videoBar').slideUp();
+    $('#playBar').slideDown();
+})

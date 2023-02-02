@@ -11871,6 +11871,13 @@ pre .code {
   text-align: center;
 }
 
+.header .overlay .main_author {
+  margin-top: 0px;
+  font-size: calc(17px + (30 - 20) * ((100vw - 320px) / (1200 - 320)));
+  font-weight: bold;
+  text-align: center;
+}
+
 .header .overlay .conference {
   margin-top: 20px;
   font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1200 - 320)));
