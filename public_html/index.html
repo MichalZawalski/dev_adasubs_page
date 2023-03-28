@@ -20,7 +20,7 @@
     <nav class="navbar custom-navbar navbar-expand-lg navbar-dark" data-spy="affix" data-offset-top="20">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="assets/imgs/logo.png" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Creative studio Landing page">
+<!--                 <img src="assets/imgs/logo.png" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Creative studio Landing page"> -->
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span></span>
@@ -32,16 +32,19 @@
                         <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#intro">Idea</a>
+                        <a class="nav-link" href="#intro">Abstract</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#environments">Environments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#adasubs">Method</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#experiments">Experiments</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#method">Method</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#adaptivity">Adaptivity</a>
+                        <a class="nav-link" href="#generating">Demos</a>
                     </li>
                     <!--<li class="nav-item">
                         <a class="nav-link btn btn-primary btn-sm ml-lg-3" href="components.html">Components</a>
@@ -72,7 +75,7 @@
                 <div style="width: 33.333%"><h6 class="author">Łukasz Kuciński</h6></div>
                 <div style="width: 33.333%"><h6 class="author">Piotr Miłoś</h6></div>
             </div>
-            <h6 class="conference"><b>ICLR 2023</b></h6>
+            <h6 class="conference"><b>ICLR 2023, notable-top-5%</b></h6>
             <div class="buttons text-center">
                 <a href="https://arxiv.org/abs/2206.00702?context=cs" class="btn btn-primary rounded w-lg btn-lg my-1">Publication</a>
                 <a href="https://github.com/AdaptiveSubgoalSearch/adaptive_subs" class="btn btn-outline-light rounded w-lg btn-lg my-1">GitHub</a>
@@ -112,12 +115,11 @@
                     <p>tmp image</p>
                 </div>
                 <div class="col-md-7 col-lg-8">
-                    <h6 class="section-subtitle mb-0">Main Idea of</h6>
-                    <h6 class="section-title mb-3">Adaptive Subgoal Search</h6>
-                    <p>When solving complex problems, it is often required to use searching to determine a good action plan.</p>
-                    <p>We are proud to present Adaptive Subgoal Search (AdaSubS), a trainable hierarchical search algorithm that performs efficient planning. Instead of expanding the search tree with atomic actions, AdaSubS plans with subgoals that are a few steps ahead. That leads to much sparser search trees, which makes the search faster and deeper.</p>
-                    <p>Complex environments usually contain easy parts, where it is easy to advance, and hard bottlenecks. Taking advantage of this property, we introduce an adaptive mechanism that controls the distance of generated subgoals to match the local complexity of the environment. We benchmark several natural schemes of adaptivity and select one that consistently outperforms others.</p>
-<!--                     <p>To facilitate planning with long subgoals, we introduce a verification mechanism that swiftly filters out invalid candidates.</p> -->
+<!--                     <h6 class="section-subtitle mb-0">brief</h6> -->
+                    <h6 class="section-title mb-3">Abstract</h6>
+                    <p>Complex reasoning problems contain states that vary in the computational cost required to determine a good action plan. Taking advantage of this property, we propose Adaptive Subgoal Search (AdaSubS), a search method that adaptively adjusts the planning horizon. To this end, AdaSubS generates diverse sets of subgoals at different distances.</p>
+                    <p>A verification mechanism is employed to filter out unreachable subgoals swiftly, allowing to focus on feasible further subgoals. In this way, AdaSubS benefits from the efficiency of planning with longer subgoals and the fine control with the shorter ones, and thus scales well to difficult planning problems.</p>
+                    <p>We show that AdaSubS significantly surpasses hierarchical planning algorithms on three complex reasoning tasks: Sokoban, the Rubik's Cube, and inequality proving benchmark INT.</p>
                 </div>
             </div>
         </div>
@@ -165,15 +167,29 @@
         </div>
     </section>-->
     <!-- End Of Environments -->
-
-    <!-- Experiments Section -->
-    <section id="experiments">
-        <div class="container">
-            <h6 class="section-subtitle text-center">Meet Our</h6>
-            <h5 class="section-title text-center mb-6">Experimental Validation</h5>
-            <img src="assets/imgs/success_chart.png" alt="Line charts with success rate" class="w-100 mb-3">
-            TODO: improve the charts (quality and colours).
-            <p>The results are great! SOTA INT!!</p>
+    
+    <!-- Environments Section -->
+    <section id="environments">
+        <div class="container text-center">
+            <h6 class="section-subtitle">We Test on</h6>
+            <h6 class="section-title mb-6">Environments with Complex Reasoning</h6>
+            <div class="envs-widget row mb-6">
+                <div class="envs-widget-item col-4">
+                    <img src="assets/imgs/sokoban_icon.png" alt="Sokoban">
+                    <h4>Sokoban</h4>
+                    <p>Sokoban is a single-player game in which the player controls an agent whose goal is to push the boxes on target locations (scroll down to play). It is difficult due to its combinatorial complexity and the existence of irreversible states. Deciding, if Sokoban boards are solvable, is an NP-hard problem.</p>
+                </div>
+                <div class="envs-widget-item col-4">
+                    <img src="assets/imgs/rubik_icon.png" alt="Rubik's Cube">
+                    <h4>Rubik's Cube</h4>
+                    <p>Rubik’s Cube is a classical 3D combination puzzle. It is challenging due to the fact that the search space has more than 4.3x10<sup>18</sup> configurations.</p>
+                </div>
+                <div class="envs-widget-item col-4">
+                    <img src="assets/imgs/int_icon.png" alt="Inequality Theorem Proving">
+                    <h4>Inequality Theorem Proving</h4>
+                    <p>INT provides a generator of inequalities, which produces mathematical formulas along with their proofs. Proofs are sequences of consecutively applied mathematical axioms. An action in INT is a tuple containing an axiom and its input entities. The action space in this problem can be large, reaching up to 106 elements, which significantly complicates planning.</p>
+                </div>
+            </div>
         </div>
     </section>
     <!-- End of Experiments Section -->
@@ -183,11 +199,35 @@
         <div class="container text-center">
             <h6 class="section-subtitle">An Example</h6>
             <h6 class="section-title mb-6">Solving Trajectory</h6>
-            <img src="assets/imgs/solving_trajectory.png" alt="Inequality Theorem Proving" class="w-100">
+            <img src="assets/imgs/solving_trajectory.png" alt="Example trajectory" class="w-100">
             <p>TODO: this can be either a static image of a trajectory (with subgoal highlighted) or an animation of consecutive states and subgoals.</p>
         </div>
     </section>
     <!-- End Of Example trajectory -->
+
+    <!-- AdaSubS Section -->
+    <section id="adasubs">
+        <div class="container">
+            <h6 class="section-subtitle text-center">Details of</h6>
+            <h5 class="section-title text-center mb-6">Adaptive Subgoal Search</h5>
+            <p>AdaSubS utilizes the following key components: subgoal generators, verifier, conditional low-level policy (CLLP), and value function. These components are implemented using trained neural networks. AdaSubS iteratively builds a tree of subgoals reachable from the initial state until the target state is reached or the search budget is depleted. In each iteration, it chooses a node in the tree that is expanded by one of the generators. The chosen generator creates a few subgoal candidates, i.e., states expected to be a few steps closer to the target than the current node. For each of them, we use the verifier and CLLP to check whether they are valid and reachable within a few steps. For the correct subgoals, we compute their value function, place them in the search tree, and the next iteration follows.</p>
+            <p>Perhaps the most important design decision is how to select the next node to be processed and the details of the expansion phase. To this end, AdaSub uses a priority queue of states with the keys being a distance-value pair  (k, v) sorted in lexicographical order. After extracting the max node, we use the corresponding k-generator to create subgoals. For valid s', we estimate its value v' and add s' to the queue once for each generator distance k', i.e., once for each (k', v').</p>
+            <p>Using other queue orderings implements different adaptivity mechanisms. We discuss four possible options in Sec 4.4 of the paper.</p>
+            <center><img src="assets/imgs/flowchart.png" alt="flowchart" class="w-75 mb-3"></center>
+        </div>
+    </section>
+    <!-- End of AdaSubS Section -->
+
+    <!-- Experiments Section -->
+    <section id="experiments">
+        <div class="container">
+            <h6 class="section-subtitle text-center">The Results of</h6>
+            <h5 class="section-title text-center mb-6">Experimental Validation</h5>
+            <img src="assets/imgs/success_int_chart.png" alt="Line charts with success rate" class="w-100 mb-3">
+            <p>The two plots showcase the performance of three methods, AdaSubS, K-SubS, and BestFS, in terms of available budget i.e., graph size. The success rates of these methods are evaluated for in-distribution and out-of-distribution cases. The in-distribution performance (left figure) represents the success score on proofs of lengths 15 after being trained on the same length. The out-of-distribution (right figure) represents performance carried out on INT with a proof length of 20, while the training is performed on a proof length of 15. The plots provide insights into the effectiveness of these three methods, especially AdaSubS, for low budgets (~100) and high budgets (~1000).</p>
+        </div>
+    </section>
+    <!-- End of Experiments Section -->
 
     <!-- OOD Section -->
     <section>
@@ -195,8 +235,8 @@
             <h6 class="section-subtitle text-center">Generalizing</h6>
             <h5 class="section-title text-center mb-6">Out-Of-Distribution</h5>
             <p>Reinforcement learning algorithms are known for their brittleness when evaluated out of their training distribution. In contrast, AdaSubS is surprisingly resistant to various types of domain shifts.</p>
-            <h5 class="text-center">Inequality Theorem Proving</h5>
-            <center><img src="assets/imgs/ood_int.png" alt="OOD results in the INT environment" class="w-75 mb-3"></center>
+<!--             <h5 class="text-center">Inequality Theorem Proving</h5> -->
+            <center><img src="assets/imgs/ood_int_blue_gray_big.png" alt="OOD results in the INT environment" class="w-75 mb-3"></center>
             <p>We trained all the components to solve problems consisting of 15 steps and evaluated on twice more complex instances. AdaSubS solves more than half of the hardest problems, while its non-adaptive counterpart fails.</p>
             <h5 class="text-center">Rubik's Cube</h5>
             <p>As we know, each cube can be solved in at most 26 moves. To test generalization in that domain, we trained the pipeline on trajectories consisting of only 10 random moves. That distribution covers about 0.000000001% of possible configurations, mostly the easiest. Despite that gap, AdaSubS successfully solves more than 99% of fully scrambled cubes.</p>
@@ -218,330 +258,48 @@
     </section>
     <!-- End Of Try AdaSubS Yourself -->
     
-    <!-- Method Section -->
-    <section id="method">
+    <!-- Generating Section -->
+    <section id="generating">
         <div class="container">
-            <h6 class="section-subtitle text-center mb-0">The Details of</h6>
-            <h6 class="section-title text-center mb-3">Our Method</h6>
+            <h6 class="section-subtitle text-center mb-0">Explore</h6>
+            <h6 class="section-title text-center mb-3">Generating Subgoals</h6>
             
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente cupiditate quas, amet harum perferendis minus, cum dolorum obcaecati iste aspernatur voluptatum aut.</p>
-            <p>Cum laudantium unde nemo doloribus eligendi quodarum ea vitae dicta. Accusantium vero, ea? Alias, atque libero. Id, ut harum. </p>
-            <p>consectetur adipisicing elit. Omnis quidem, quos iure a dolorum illum culpa quia nemo soluta, ratione harum beatae minus doloribus consectetur! Similique tempora sunt doloribus molestias.</p>
-            
-            <h5 class="">Subgoal Generator</h5>
-            <div class="row">
-                <div class="col-md-7 col-lg-8">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente cupiditate quas, amet harum perferendis minus, cum dolorum obcaecati iste aspernatur voluptatum aut.</p>
-                    <p>Cum laudantium unde nemo doloribus eligendi quodarum ea vitae dicta. Accusantium vero, ea? Alias, atque libero. Id, ut harum. </p>
-                    <p>consectetur adipisicing elit. Omnis quidem, quos iure a dolorum illum culpa quia nemo soluta, ratione harum beatae minus doloribus consectetur! Similique tempora sunt doloribus molestias.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente cupiditate quas, amet harum perferendis minus, cum dolorum obcaecati iste aspernatur voluptatum aut.</p>
-                    <p>Cum laudantium unde nemo doloribus eligendi quodarum ea vitae dicta. Accusantium vero, ea? Alias, atque libero. Id, ut harum. </p>
-                </div>
-                <div class="col-md-5 col-lg-4">
-                    <img src="assets/imgs/method_generator_il.png" alt="Subgoal generator - illustration" class="w-100 img-thumbnail mb-3">
-                    <img src="assets/imgs/method_generator_tr.png" alt="Subgoal generator - training" class="w-100 img-thumbnail mb-3">
-                </div>
-            </div>
-            
-            <h5 class="">Conditional Low-Level Policy</h5>
-            <div class="row">
-                <div class="col-md-7 col-lg-8">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente cupiditate quas, amet harum perferendis minus, cum dolorum obcaecati iste aspernatur voluptatum aut.</p>
-                    <p>Cum laudantium unde nemo doloribus eligendi quodarum ea vitae dicta. Accusantium vero, ea? Alias, atque libero. Id, ut harum. </p>
-                    <p>consectetur adipisicing elit. Omnis quidem, quos iure a dolorum illum culpa quia nemo soluta, ratione harum beatae minus doloribus consectetur! Similique tempora sunt doloribus molestias.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente cupiditate quas, amet harum perferendis minus, cum dolorum obcaecati iste aspernatur voluptatum aut.</p>
-                    <p>Cum laudantium unde nemo doloribus eligendi quodarum ea vitae dicta. Accusantium vero, ea? Alias, atque libero. Id, ut harum. </p>
-                </div>
-                <div class="col-md-5 col-lg-4">
-                    <img src="assets/imgs/method_generator_il.png" alt="Subgoal generator - illustration" class="w-100 img-thumbnail mb-3">
-                    <img src="assets/imgs/method_generator_tr.png" alt="Subgoal generator - training" class="w-100 img-thumbnail mb-3">
-                </div>
-            </div>
-            
-            <h5 class="">Verifier</h5>
-            <div class="row">
-                <div class="col-md-7 col-lg-8">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente cupiditate quas, amet harum perferendis minus, cum dolorum obcaecati iste aspernatur voluptatum aut.</p>
-                    <p>Cum laudantium unde nemo doloribus eligendi quodarum ea vitae dicta. Accusantium vero, ea? Alias, atque libero. Id, ut harum. </p>
-                    <p>consectetur adipisicing elit. Omnis quidem, quos iure a dolorum illum culpa quia nemo soluta, ratione harum beatae minus doloribus consectetur! Similique tempora sunt doloribus molestias.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente cupiditate quas, amet harum perferendis minus, cum dolorum obcaecati iste aspernatur voluptatum aut.</p>
-                    <p>Cum laudantium unde nemo doloribus eligendi quodarum ea vitae dicta. Accusantium vero, ea? Alias, atque libero. Id, ut harum. </p>
-                </div>
-                <div class="col-md-5 col-lg-4">
-                    <img src="assets/imgs/method_generator_il.png" alt="Subgoal generator - illustration" class="w-100 img-thumbnail mb-3">
-                    <img src="assets/imgs/method_generator_tr.png" alt="Subgoal generator - training" class="w-100 img-thumbnail mb-3">
-                </div>
-            </div>
-            
-            <h5 class="">Value Function</h5>
-            <div class="row">
-                <div class="col-md-7 col-lg-8">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente cupiditate quas, amet harum perferendis minus, cum dolorum obcaecati iste aspernatur voluptatum aut.</p>
-                    <p>Cum laudantium unde nemo doloribus eligendi quodarum ea vitae dicta. Accusantium vero, ea? Alias, atque libero. Id, ut harum. </p>
-                    <p>consectetur adipisicing elit. Omnis quidem, quos iure a dolorum illum culpa quia nemo soluta, ratione harum beatae minus doloribus consectetur! Similique tempora sunt doloribus molestias.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente cupiditate quas, amet harum perferendis minus, cum dolorum obcaecati iste aspernatur voluptatum aut.</p>
-                    <p>Cum laudantium unde nemo doloribus eligendi quodarum ea vitae dicta. Accusantium vero, ea? Alias, atque libero. Id, ut harum. </p>
-                </div>
-                <div class="col-md-5 col-lg-4">
-                    <img src="assets/imgs/method_generator_il.png" alt="Subgoal generator - illustration" class="w-100 img-thumbnail mb-3">
-                    <img src="assets/imgs/method_generator_tr.png" alt="Subgoal generator - training" class="w-100 img-thumbnail mb-3">
-                </div>
-            </div>
-            
-            <h5 class="">Planner</h5>
-            <div class="row">
-                <div class="col-md-7 col-lg-8">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente cupiditate quas, amet harum perferendis minus, cum dolorum obcaecati iste aspernatur voluptatum aut.</p>
-                    <p>Cum laudantium unde nemo doloribus eligendi quodarum ea vitae dicta. Accusantium vero, ea? Alias, atque libero. Id, ut harum. </p>
-                    <p>consectetur adipisicing elit. Omnis quidem, quos iure a dolorum illum culpa quia nemo soluta, ratione harum beatae minus doloribus consectetur! Similique tempora sunt doloribus molestias.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente cupiditate quas, amet harum perferendis minus, cum dolorum obcaecati iste aspernatur voluptatum aut.</p>
-                    <p>Cum laudantium unde nemo doloribus eligendi quodarum ea vitae dicta. Accusantium vero, ea? Alias, atque libero. Id, ut harum. </p>
-                </div>
-                <div class="col-md-5 col-lg-4">
-                    <img src="assets/imgs/method_generator_il.png" alt="Subgoal generator - illustration" class="w-100 img-thumbnail mb-3">
-                    <img src="assets/imgs/method_generator_tr.png" alt="Subgoal generator - training" class="w-100 img-thumbnail mb-3">
-                </div>
-            </div>
-            
-            <center><img src="assets/imgs/iteration.png" alt="An illustration of a single iteration" class="w-75 mb-3"></center>
+            <p>Below, we provide an interactive visualization of precomputed subgoals, which mimics the traces of AdaSubS execution for some Sokoban boards. To make the visualization more diverse, for each board, we present the 2-, 4-, and 8-subgoals, which are reachable (i.e., the ones verified by the low-level policy or the verifier). Subgoals for an arbitrary board can be generated in our colab.</p>
+            <ul>
+                <li>Click on the board images to expand the subgoal tree.</li>
+                <li>You can zoom using a mouse wheel and move the image by dragging the mouse.</li>
+                <li>A boarder will highlight the selected subgoals.</li>
+                <li>Green arrows show the low-level actions connecting two subgoals.</li>
+                <li>The amount of green arrows shown on the board indicates "k" in the subgoal generator.</li>
+            <ul>
+            <center><iframe src="subgoals.html" class="w-75"></iframe></center>
         </div>
     </section>
-    <!-- End of Method Section -->
+    <!-- End of Generating Section -->
     
-    <!-- Adaptivity Section -->
-    <section id="adaptivity">
+    <!-- Play Sokoban Section -->
+    <section id="play_sokoban">
         <div class="container">
-            <h6 class="section-subtitle text-center">The Variety of</h6>
-            <h5 class="section-title text-center mb-6">Adaptive Planner Algorithms</h5>
-            <p>There are so many natural implementations of adaptivity that it makes me feel dizzy. So we don't focus just on a single imaginary scheme, but rather test each of them, dude! Now, behold our research.</p>
-            <h5 class="text-center">MixSubS</h5>
-            <p>Just use a few generators and call it a day.</p>
-            <h5 class="text-center">Iterative Mixing</h5>
-            <p>Specify # of iterations for each.</p>
-            <h5 class="text-center">Strongest-first</h5>
-            <p>Simply take the best.</p>
-            <h5 class="text-center">Longest-first</h5>
-            <p>Funny one, but apparently works!</p>
+            <h6 class="section-subtitle text-center">Play</h6>
+            <h5 class="section-title text-center mb-6">The Sokoban Game</h5>
+            <ul>
+                <li>Move Kenny using left, right, up, and down key arrows.</li>
+                <li>Move all the boxes to designated pink-bordered-cells.</li>
+                <li>Generate a new board using the 'Reset Board' button.</li>
+            <ul>
+            <center><iframe src="sokoban_game.html" class="w-75" style="border: 0;"></iframe></center>
         </div>
     </section>
-    <!-- End of Adaptivity Section -->
+    <!-- End of Play Sokoban Section -->
 
-    <!-- Fatcs Section -->
-    <!--<section class="has-bg-img bg-img-2">
-        <div class="container text-center">
-            <h6 class="section-subtitle">We Are Awesome</h6>
-            <h6 class="section-title mb-6">Some Fun Fucts</h6>
-                <div class="widget-2">
-                    <div class="widget-item">
-                        <i class="ti-cup"></i>
-                        <h6 class="title">100+</h6>
-                        <div class="subtitle">Awards Won</div>
-                    </div>
-                    <div class="widget-item">
-                        <i class="ti-face-smile"></i>
-                        <h6 class="title">100+</h6>
-                        <div class="subtitle">Happy Clients</div>
-                    </div>
-                    <div class="widget-item">
-                        <i class="ti-blackboard"></i>
-                        <h6 class="title">845+</h6>
-                        <div class="subtitle">Project Completed</div>
-                    </div>
-                    <div class="widget-item">
-                        <i class="ti-comments-smiley"></i>
-                        <h6 class="title">15K+</h6>
-                        <div class="subtitle">Comments</div>
-                    </div>
-                </div>
-        </div>
-    </section>-->
-
-    <!-- Insights Section -->
-    <!--<section id="insights">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-5 col-lg-4">
-                    <img src="assets/imgs/main_idea.png" alt="Example subgoals for car driving" class="w-100 img-thumbnail mb-3">
-                    <p>tmp image</p>
-                </div>
-                <div class="col-md-7 col-lg-8">
-                    <h6 class="section-subtitle mb-0">What Makes AdaSubS</h6>
-                    <h6 class="section-title mb-3">Successful?</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente cupiditate quas, amet harum perferendis minus, cum dolorum obcaecati iste aspernatur voluptatum aut.</p>
-                    <p>Cum laudantium unde nemo doloribus eligendi quodarum ea vitae dicta. Accusantium vero, ea? Alias, atque libero. Id, ut harum. </p>
-                    <p>consectetur adipisicing elit. Omnis quidem, quos iure a dolorum illum culpa quia nemo soluta, ratione harum beatae minus doloribus consectetur! Similique tempora sunt doloribus molestias.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente cupiditate quas, amet harum perferendis minus, cum dolorum obcaecati iste aspernatur voluptatum aut.</p>
-                    <p>Cum laudantium unde nemo doloribus eligendi quodarum ea vitae dicta. Accusantium vero, ea? Alias, atque libero. Id, ut harum. </p>
-                    <p>consectetur adipisicing elit. Omnis quidem, quos iure a dolorum illum culpa quia nemo soluta, ratione harum beatae minus doloribus consectetur! Similique tempora sunt doloribus molestias.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente cupiditate quas, amet harum perferendis minus, cum dolorum obcaecati iste aspernatur voluptatum aut.</p>
-                    <p>Cum laudantium unde nemo doloribus eligendi quodarum ea vitae dicta. Accusantium vero, ea? Alias, atque libero. Id, ut harum. </p>
-                    <p>consectetur adipisicing elit. Omnis quidem, quos iure a dolorum illum culpa quia nemo soluta, ratione harum beatae minus doloribus consectetur! Similique tempora sunt doloribus molestias.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente cupiditate quas, amet harum perferendis minus, cum dolorum obcaecati iste aspernatur voluptatum aut.</p>
-                    <p>Cum laudantium unde nemo doloribus eligendi quodarum ea vitae dicta. Accusantium vero, ea? Alias, atque libero. Id, ut harum. </p>
-                    <p>consectetur adipisicing elit. Omnis quidem, quos iure a dolorum illum culpa quia nemo soluta, ratione harum beatae minus doloribus consectetur! Similique tempora sunt doloribus molestias.</p>
-                </div>
-            </div>
-        </div>
-    </section>-->
-    <!-- End of Insights Section -->
-    
-    <!-- Future Work Section -->
-    <!--<section id="future">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-5 col-lg-4">
-                    <img src="assets/imgs/main_idea.png" alt="Example subgoals for car driving" class="w-100 img-thumbnail mb-3">
-                    <p>tmp image</p>
-                </div>
-                <div class="col-md-7 col-lg-8">
-                    <h6 class="section-subtitle mb-0">Promising</h6>
-                    <h6 class="section-title mb-3">Future Directions</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente cupiditate quas, amet harum perferendis minus, cum dolorum obcaecati iste aspernatur voluptatum aut.</p>
-                    <p>Cum laudantium unde nemo doloribus eligendi quodarum ea vitae dicta. Accusantium vero, ea? Alias, atque libero. Id, ut harum. </p>
-                    <p>consectetur adipisicing elit. Omnis quidem, quos iure a dolorum illum culpa quia nemo soluta, ratione harum beatae minus doloribus consectetur! Similique tempora sunt doloribus molestias.</p>
-                </div>
-            </div>
-        </div>
-    </section>-->
-    <!-- End of Future Work Section -->
-
-    <!-- Video Section -->
-    <!--<section id="video" class="has-bg-img py-lg">
-        <div id="videoBar" class="container" style="display:none">
-            <video id="introVideo" width="100%" controls>
-                <source src="assets/imgs/intro.ogv" type="video/ogg">
-                Your browser does not support the video tag.
-            </video> 
-        </div>
-        
-        <div id="playBar" class="container text-center">
-            <button type="button" id="playIntroButton" class="btn btn-outline-primary play-control">
-              <i class="ti-control-play" ></i>
-            </button>
-            <h6 class="section-title mt-4">See Our Overview Video</h6>
-
-        </div>
-    </section>-->
-    <!-- End of Video Section -->
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="contact-card">
-                <div class="infos">
-                    <h6 class="section-subtitle">Get Here</h6>
-                    <h6 class="section-title mb-4">Contact Us</h6>
-
-                    <div class="item">
-                        <i class="ti-location-pin"></i>
-                        <div class="">
-                            <h5>Location</h5>
-                            <p> 12345 Fake ST NoWhere AB Country</p>
-                        </div>                          
-                    </div>
-                    <div class="item">
-                        <i class="ti-mobile"></i>
-                        <div>
-                            <h5>Phone Number</h5>
-                            <p>(123) 456-7890</p>
-                        </div>                          
-                    </div>
-                    <div class="item">
-                        <i class="ti-email"></i>
-                        <div class="mb-0">
-                            <h5>Email Address</h5>
-                            <p>info@website.com</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <i class="ti-world"></i>
-                        <div class="mb-0">
-                            <h5>example.com</h5>
-                            <p>info@example.com</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="form">
-                    <h6 class="section-subtitle">Available 24/7</h6>
-                    <h6 class="section-title mb-4">Get In Touch</h6>
-                    <form>
-                        <div class="form-group">
-                            <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="contact-message" id="" cols="30" rows="7" class="form-control form-control-lg" placeholder="Message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block btn-lg mt-3">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End of Contact Section -->
 
     <!-- Footer -->
     <section class="has-bg-img py-0">
         <div class="container">
             <div class="footer">
-                <div class="footer-lists">
-                    <ul class="list">
-                        <li class="list-head">
-                            <h6 class="font-weight-bold">ABOUT US</h6>
-                        </li>
-                        <li class="list-body">
-                            <a href="#" class="logo">
-                                <img src="assets/imgs/logo.png" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Creative studio Landing page">
-                                <h6>Creative Studio</h6>
-                            </a>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae nobis fugit maxime deleniti minus optio accusamus, quam maiores explicabo sunt.</p> 
-                            <p class="mt-3">
-                                Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a class="d-inline text-primary" href="http://www.devcrud.com">DevCRUD</a>
-                            </p>                   
-                        </li>
-                    </ul>
-                    <ul class="list">
-                        <li class="list-head">
-                            <h6 class="font-weight-bold">USEFUL LINKS</h6>
-                        </li>
-                        <li class="list-body">
-                            <div class="row">
-                                <div class="col">
-                                    <a href="#about">About</a>
-                                    <a href="#service">Service</a>
-                                    <a href="#portfolio">Portfolio</a>
-                                    <a href="#testmonail">Testimonial</a>
-                                </div>
-                                <div class="col">
-                                    <a href="#team">Team</a>
-                                    <a href="#blog">Blog</a>
-                                    <a href="#">Faq</a>
-                                    <a href="#">Privacy Policy</a>                  
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul class="list">
-                        <li class="list-head">
-                            <h6 class="font-weight-bold">CONTACT INFO</h6>
-                        </li>
-                        <li class="list-body">
-                            <p>Contact us and we'll get back to you within 24 hours.</p>
-                            <p><i class="ti-location-pin"></i> 12345 Fake ST NoWhere AB Country</p>
-                            <p><i class="ti-email"></i>  info@website.com</p>
-                            <div class="social-links">
-                                <a href="javascript:void(0)" class="link"><i class="ti-facebook"></i></a>
-                                <a href="javascript:void(0)" class="link"><i class="ti-twitter-alt"></i></a>
-                                <a href="javascript:void(0)" class="link"><i class="ti-google"></i></a>
-                                <a href="javascript:void(0)" class="link"><i class="ti-pinterest-alt"></i></a>
-                                <a href="javascript:void(0)" class="link"><i class="ti-instagram"></i></a>
-                                <a href="javascript:void(0)" class="link"><i class="ti-rss"></i></a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                <h6 class="section-subtitle text-center">Still Not Convinced?</h6>
+                <h5 class="section-title text-center mb-6">Chat With Us!</h5>
+<!--                 <p>Emails are provided in the paper.</p> -->
             </div>    
         </div>
     </section>

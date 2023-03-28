@@ -90,6 +90,10 @@ p {
   margin-bottom: 1rem;
 }
 
+iframe {
+  aspect-ratio: 1.1;
+}
+
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
@@ -11075,7 +11079,7 @@ p {
 
 .envs-widget .envs-widget-item {
   width: 180px;
-  height: 180px;
+  height: 100%;
   border-radius: 50%;
   text-align: center;
   position: relative;
@@ -11837,7 +11841,7 @@ pre .code {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.75);
   color: #fff;
   display: -webkit-box;
   display: -webkit-flex;
